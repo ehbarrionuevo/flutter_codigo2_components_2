@@ -3,7 +3,41 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+
+
+  List<Map<String, dynamic>> data = [
+    {
+      "id": 1,
+      "type": "Sent",
+      "description": "Sending Payment to Clients",
+    },
+    {
+      "id": 2,
+      "type": "Receive",
+      "description": "Receiving Salary from company",
+    },
+    {
+      "id": 3,
+      "type": "Loan",
+      "description": "Loan for the Car",
+    },
+    {
+      "id": 4,
+      "type": "Receive",
+      "description": "Receiving Salary from company 2",
+    },
+    {
+      "id": 5,
+      "type": "Sent",
+      "description": "Sending Payment to Clients 2",
+    },
+    {
+      "id": 6,
+      "type": "Loan",
+      "description": "Loan for the Car",
+    },
+  ];
+
 
   @override
   Widget build(BuildContext context) {
