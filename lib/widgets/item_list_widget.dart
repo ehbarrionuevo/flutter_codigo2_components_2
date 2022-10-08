@@ -1,8 +1,11 @@
-
 import 'package:flutter/material.dart';
 
 class ItemListWidget extends StatelessWidget {
-  const ItemListWidget({Key? key}) : super(key: key);
+  Map<String, dynamic> item;
+
+  ItemListWidget({
+    required this.item,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +19,15 @@ class ItemListWidget extends StatelessWidget {
           BoxShadow(
               color: const Color(0xff3D4584).withOpacity(0.11),
               blurRadius: 12.0,
-              offset: const Offset(0, 7.0)
-          ),
+              offset: const Offset(0, 7.0)),
         ],
       ),
       child: Row(
         children: [
           Container(
             padding: const EdgeInsets.symmetric(
-              horizontal: 14.0, vertical: 12.0,
+              horizontal: 14.0,
+              vertical: 12.0,
             ),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(18.0),
@@ -40,12 +43,12 @@ class ItemListWidget extends StatelessWidget {
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-              children: const [
+              children: [
                 Text(
-                  "Sent",
+                  item["type"],
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.0,
                   ),
@@ -54,13 +57,13 @@ class ItemListWidget extends StatelessWidget {
                   height: 2.0,
                 ),
                 Text(
-                  "Sending Payment to Clients",
+                  item["description"],
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                      fontWeight: FontWeight.normal,
-                      fontSize: 11.0,
-                      color: Colors.black54
+                  style: const TextStyle(
+                    fontWeight: FontWeight.normal,
+                    fontSize: 11.0,
+                    color: Colors.black54,
                   ),
                 )
               ],

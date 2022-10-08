@@ -243,14 +243,18 @@ class HomePage extends StatelessWidget {
                 const SizedBox(
                   height: 22.0,
                 ),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
-                ItemListWidget(),
+                // ...data.map((e) => ItemListWidget()).toList(),
+                //...List.generate(data.length, (index) => ItemListWidget()),
+                ListView.builder(
+                  shrinkWrap: true,
+                  physics: ScrollPhysics(),
+                  itemCount: data.length,
+                  itemBuilder: (BuildContext context, int index){
+                    return ItemListWidget(
+                      item: data[index],
+                    );
+                  },
+                ),
               ],
             ),
           ),
