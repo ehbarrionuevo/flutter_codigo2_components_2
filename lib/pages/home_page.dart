@@ -205,7 +205,7 @@ class HomePage extends StatelessWidget {
                 ],
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
                 decoration: BoxDecoration(
                   color: Colors.blue,
                   borderRadius: BorderRadius.circular(24.0)
@@ -213,25 +213,48 @@ class HomePage extends StatelessWidget {
                 child: Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 14.0, vertical: 12.0),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 14.0, vertical: 12.0,
+                      ),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(18.0),
                         color: Colors.amber,
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.arrow_upward,
                       ),
                     ),
-                    Column(
-                      children: [
-                        Text(
-                          "Sent",
-                        ),
-                        Text(
-                          "Sending Payment to Clients",
-                        )
-                      ],
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Sent",
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14.0,
+                            ),
+                          ),
+                          SizedBox(
+                            height: 2.0,
+                          ),
+                          Text(
+                            "Sending Payment to Clients ",
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 11.0,
+                              color: Colors.black54
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                     Text(
                       "\$150",
