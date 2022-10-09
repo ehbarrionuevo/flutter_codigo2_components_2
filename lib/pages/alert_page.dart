@@ -156,20 +156,18 @@ class AlertPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 9.0),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6.0, vertical: 9.0),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: Colors.black26.withOpacity(0.16)
-                          ),
+                              color: Colors.black26.withOpacity(0.16)),
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                         child: Text(
                           "untitle.com/total/promo",
                           overflow: TextOverflow.ellipsis,
                           maxLines: 1,
-                          style: TextStyle(
-                            fontSize: 13.0
-                          ),
+                          style: TextStyle(fontSize: 13.0),
                         ),
                       ),
                     ),
@@ -180,8 +178,7 @@ class AlertPage extends StatelessWidget {
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8.0)
-                        ),
+                            borderRadius: BorderRadius.circular(8.0)),
                       ),
                       icon: Icon(Icons.link),
                       label: Text(
@@ -244,6 +241,26 @@ class AlertPage extends StatelessWidget {
     );
   }
 
+  void showAlert3(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14.0),
+          ),
+          contentPadding: EdgeInsets.zero,
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+
+            ],
+          ),
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -276,6 +293,18 @@ class AlertPage extends StatelessWidget {
               ),
               onPressed: () {
                 showAlert2(context);
+              },
+            ),
+            MaterialButton(
+              color: Colors.black,
+              child: const Text(
+                "Alert 3",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                showAlert3(context);
               },
             ),
           ],
