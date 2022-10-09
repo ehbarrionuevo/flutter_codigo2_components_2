@@ -431,8 +431,14 @@ class AlertPage extends StatelessWidget {
                 ),
 
                 Container(
+                  height: 40.0,
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   decoration: BoxDecoration(
-                    border: Border.all()
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(
+                      color: Colors.black.withOpacity(0.17),
+                      width: 1.4,
+                    )
                   ),
                   child: DropdownButtonHideUnderline(
                     child: DropdownButton(
@@ -443,7 +449,11 @@ class AlertPage extends StatelessWidget {
                         DropdownMenuItem(
                           value: "A",
                           child: Text(
-                            "Hola",
+                            "Select team member",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.black54,
+                            ),
                           ),
                         ),
                         DropdownMenuItem(
