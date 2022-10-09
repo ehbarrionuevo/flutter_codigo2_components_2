@@ -251,9 +251,15 @@ class AlertPage extends StatelessWidget {
           ),
           contentPadding: EdgeInsets.zero,
           content: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-
+              Image.asset(
+                'assets/images/figma.png',
+                height: 60.0,
+              ),
+              Text("Share with people",),
+              Text("The following users have access:",),
             ],
           ),
         );
