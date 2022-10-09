@@ -97,28 +97,42 @@ class AlertPage extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                height: 160.0,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: NetworkImage(
-                      "https://images.pexels.com/photos/6579068/pexels-photo-6579068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          content: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  height: 160.0,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12.0),
+                    image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                        "https://images.pexels.com/photos/6579068/pexels-photo-6579068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Text(
-                "Your video has been uploaded!",
-              ),
-              Text(
-                "You're video has finished uploading and is live.",
-              ),
-            ],
+                Text(
+                  "Your video has been uploaded!",
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    color: Color(0xff424550),
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  "You're video has finished uploading and is live.",
+                  style: TextStyle(
+                    fontSize: 12.0,
+                    color: Color(0xff424550).withOpacity(0.65),
+                    fontWeight: FontWeight.normal,
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
