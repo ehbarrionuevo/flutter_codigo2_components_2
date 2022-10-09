@@ -250,17 +250,40 @@ class AlertPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(14.0),
           ),
           contentPadding: EdgeInsets.zero,
-          content: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Image.asset(
-                'assets/images/figma.png',
-                height: 60.0,
-              ),
-              Text("Share with people",),
-              Text("The following users have access:",),
-            ],
+          content: Padding(
+            padding: const EdgeInsets.all(14.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Image.asset(
+                  'assets/images/figma.png',
+                  height: 60.0,
+                ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+                const Text(
+                  "Share with people",
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff424550),
+                  ),
+                ),
+                const SizedBox(
+                  height: 6.0,
+                ),
+                Text(
+                  "The following users have access:",
+                  style: TextStyle(
+                    fontSize: 14.0,
+                    fontWeight: FontWeight.normal,
+                    color: const Color(0xff424550).withOpacity(0.70),
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
