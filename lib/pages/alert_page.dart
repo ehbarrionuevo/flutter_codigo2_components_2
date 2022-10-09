@@ -91,15 +91,33 @@ class AlertPage extends StatelessWidget {
   void showAlert2(BuildContext context) {
     showDialog(
       context: context,
-      builder: (BuildContext context){
+      builder: (BuildContext context) {
         return AlertDialog(
           contentPadding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.0),
           ),
           content: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-
+              Container(
+                height: 160.0,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: NetworkImage(
+                      "https://images.pexels.com/photos/6579068/pexels-photo-6579068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    ),
+                  ),
+                ),
+              ),
+              Text(
+                "Your video has been uploaded!",
+              ),
+              Text(
+                "You're video has finished uploading and is live.",
+              ),
             ],
           ),
         );
