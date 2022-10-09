@@ -430,29 +430,38 @@ class AlertPage extends StatelessWidget {
                   ),
                 ),
 
-                DropdownButton(
-                  value: "A",
-                  items: [
-                    DropdownMenuItem(
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all()
+                  ),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton(
                       value: "A",
-                      child: Text(
-                        "Hola",
-                      ),
+                      isExpanded: true,
+                      // underline: SizedBox(),
+                      items: [
+                        DropdownMenuItem(
+                          value: "A",
+                          child: Text(
+                            "Hola",
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "B",
+                          child: Text(
+                            "Hola 2",
+                          ),
+                        ),
+                        DropdownMenuItem(
+                          value: "C",
+                          child: Text(
+                            "Hola 3",
+                          ),
+                        ),
+                      ],
+                      onChanged: (value) {},
                     ),
-                    DropdownMenuItem(
-                      value: "B",
-                      child: Text(
-                        "Hola 2",
-                      ),
-                    ),
-                    DropdownMenuItem(
-                      value: "C",
-                      child: Text(
-                        "Hola 3",
-                      ),
-                    ),
-                  ],
-                  onChanged: (value) {},
+                  ),
                 ),
               ],
             ),
