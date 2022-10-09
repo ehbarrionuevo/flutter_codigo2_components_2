@@ -95,7 +95,7 @@ class AlertPage extends StatelessWidget {
         return AlertDialog(
           contentPadding: EdgeInsets.zero,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
+            borderRadius: BorderRadius.circular(14.0),
           ),
           content: Padding(
             padding: const EdgeInsets.all(16.0),
@@ -107,7 +107,7 @@ class AlertPage extends StatelessWidget {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(12.0),
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
                         "https://images.pexels.com/photos/6579068/pexels-photo-6579068.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -115,13 +115,19 @@ class AlertPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Text(
+                const SizedBox(
+                  height: 12.0,
+                ),
+                const Text(
                   "Your video has been uploaded!",
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Color(0xff424550),
                     fontWeight: FontWeight.bold,
                   ),
+                ),
+                const SizedBox(
+                  height: 6.0,
                 ),
                 Text(
                   "You're video has finished uploading and is live.",
@@ -130,6 +136,35 @@ class AlertPage extends StatelessWidget {
                     color: Color(0xff424550).withOpacity(0.65),
                     fontWeight: FontWeight.normal,
                   ),
+                ),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 8.0),
+                      decoration: BoxDecoration(
+                        border: Border.all(),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      child: Text(
+                        "untitle.com/total",
+                        style: TextStyle(
+                          fontSize: 13.0
+                        ),
+                      ),
+                    ),
+                    OutlinedButton.icon(
+                      onPressed: () {},
+                      style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)
+                        ),
+                      ),
+                      icon: Icon(Icons.link),
+                      label: Text(
+                        "Copy link",
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
