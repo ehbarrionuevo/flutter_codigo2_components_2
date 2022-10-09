@@ -430,30 +430,46 @@ class AlertPage extends StatelessWidget {
                   ),
                 ),
 
+                const SizedBox(
+                  height: 14,
+                ),
+
                 Container(
                   height: 40.0,
                   padding: const EdgeInsets.symmetric(horizontal: 10.0),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    border: Border.all(
-                      color: Colors.black.withOpacity(0.17),
-                      width: 1.4,
-                    )
-                  ),
+                      borderRadius: BorderRadius.circular(10.0),
+                      border: Border.all(
+                        color: Colors.black.withOpacity(0.17),
+                        width: 1.4,
+                      )),
                   child: DropdownButtonHideUnderline(
                     child: DropdownButton(
                       value: "A",
                       isExpanded: true,
+                      icon: Icon(
+                        Icons.arrow_drop_down,
+                        size: 16,
+                        color: Colors.black54,
+                      ),
                       // underline: SizedBox(),
                       items: [
                         DropdownMenuItem(
                           value: "A",
-                          child: Text(
-                            "Select team member",
-                            style: TextStyle(
-                              fontSize: 14.0,
-                              color: Colors.black54,
-                            ),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.person_outline_outlined, size: 18, color: Colors.black54,),
+                              SizedBox(
+                                width: 6.0,
+                              ),
+                              Text(
+                                "Select team member",
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  color: Colors.black54,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         DropdownMenuItem(
