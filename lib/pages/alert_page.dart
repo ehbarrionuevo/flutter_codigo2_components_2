@@ -137,6 +137,21 @@ class AlertPage extends StatelessWidget {
                     fontWeight: FontWeight.normal,
                   ),
                 ),
+                const SizedBox(
+                  height: 18.0,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      " Share link",
+                      style: TextStyle(
+                        fontSize: 12.0,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xff424550).withOpacity(0.80),
+                      ),
+                    ),
+                  ],
+                ),
                 Row(
                   children: [
                     Expanded(
@@ -173,6 +188,49 @@ class AlertPage extends StatelessWidget {
                         "Copy link",
                         style: TextStyle(
                           fontSize: 13.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 4.0,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: OutlinedButton(
+                        onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
+                        child: Text(
+                          "Cancelar",
+                          style: TextStyle(
+                            color: Colors.black87,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff7E56DA),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)),
+                        ),
+                        child: Text(
+                          "Confirm",
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
                     ),
