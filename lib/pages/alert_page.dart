@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class AlertPage extends StatelessWidget {
-
   void showAlert1(BuildContext context) {
     showDialog(
       context: context,
@@ -69,8 +68,7 @@ class AlertPage extends StatelessWidget {
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xff7E56DA),
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0)
-                          ),
+                              borderRadius: BorderRadius.circular(8.0)),
                         ),
                         child: Text(
                           "Confirm",
@@ -90,11 +88,24 @@ class AlertPage extends StatelessWidget {
     );
   }
 
-  void showAlert2(BuildContext context){
+  void showAlert2(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context){
+        return AlertDialog(
+          contentPadding: EdgeInsets.zero,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+          content: Column(
+            children: [
 
+            ],
+          ),
+        );
+      },
+    );
   }
-
-
 
   @override
   Widget build(BuildContext context) {
