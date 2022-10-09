@@ -282,6 +282,40 @@ class AlertPage extends StatelessWidget {
                     color: const Color(0xff424550).withOpacity(0.70),
                   ),
                 ),
+                // SizedBox(
+                //   height: 200,
+                //   width: double.maxFinite,
+                //   child: ListView(
+                //     children: [
+                //       Text("Hola",),
+                //     ],
+                //   ),
+                // ),
+
+                ListTile(
+                  contentPadding: EdgeInsets.all(0),
+                  minLeadingWidth: 0,
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.black26,
+                    backgroundImage: NetworkImage(
+                      "https://images.pexels.com/photos/6953880/pexels-photo-6953880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                    ),
+                  ),
+                  title: Text(
+                    "Candice Wu",
+                    style: TextStyle(
+                      fontSize: 13.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  subtitle: Text(
+                    "candicewu@gmail.com",
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.normal,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
