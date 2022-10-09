@@ -211,8 +211,9 @@ class _FormModalWidgetState extends State<FormModalWidget> {
                   borderRadius: BorderRadius.circular(10.0),
                   border: Border.all(
                     color: Colors.black.withOpacity(0.17),
-                    width: 1.4,
-                  )),
+                    width: 1.0,
+                  ),
+              ),
               child: DropdownButtonHideUnderline(
                 child: DropdownButton(
                   value: valueDrop,
@@ -264,6 +265,50 @@ class _FormModalWidgetState extends State<FormModalWidget> {
                 ),
               ),
             ),
+            const SizedBox(
+              height: 12.0,
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    style: OutlinedButton.styleFrom(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                    ),
+                    child: Text(
+                      "Cancelar",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 10.0,
+                ),
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff7E56DA),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0)),
+                    ),
+                    child: Text(
+                      "Confirm",
+                      style: TextStyle(
+                        fontWeight: FontWeight.normal,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
           ],
         ),
       ),
