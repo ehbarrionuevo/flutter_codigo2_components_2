@@ -292,30 +292,149 @@ class AlertPage extends StatelessWidget {
                 //   ),
                 // ),
 
-                ListTile(
-                  contentPadding: EdgeInsets.all(0),
-                  minLeadingWidth: 0,
-                  leading: CircleAvatar(
-                    backgroundColor: Colors.black26,
-                    backgroundImage: NetworkImage(
-                      "https://images.pexels.com/photos/6953880/pexels-photo-6953880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                    ),
-                  ),
-                  title: Text(
-                    "Candice Wu",
-                    style: TextStyle(
-                      fontSize: 13.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  subtitle: Text(
-                    "candicewu@gmail.com",
-                    style: TextStyle(
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.normal,
-                    ),
+                const SizedBox(
+                  height: 10.0,
+                ),
+
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 18,
+                        backgroundColor: Colors.black26,
+                        backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/6953880/pexels-photo-6953880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6.0,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Candice Wu",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "candicewu@gmail.com",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Text(
+                        "Remove",
+                        style: TextStyle(
+                          color: Colors.redAccent,
+                          fontSize: 11.0,
+                          fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
                   ),
                 ),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 18,
+                        backgroundColor: Colors.black26,
+                        backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/6953880/pexels-photo-6953880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6.0,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Candice Wu",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "candicewu@gmail.com",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Text(
+                        "Remove",
+                        style: TextStyle(
+                            color: Colors.redAccent,
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        radius: 18,
+                        backgroundColor: Colors.black26,
+                        backgroundImage: NetworkImage(
+                          "https://images.pexels.com/photos/6953880/pexels-photo-6953880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 6.0,
+                      ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Candice Wu",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              "candicewu@gmail.com",
+                              style: TextStyle(
+                                fontSize: 12.0,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const Text(
+                        "Remove",
+                        style: TextStyle(
+                            color: Colors.redAccent,
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
               ],
             ),
           ),
