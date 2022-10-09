@@ -37,13 +37,25 @@ class AlertPage extends StatelessWidget {
                     fontSize: 12.0,
                   ),
                 ),
+                const SizedBox(
+                  height: 8.0,
+                ),
                 Row(
                   children: [
                     Expanded(
                       child: OutlinedButton(
                         onPressed: () {},
+                        style: OutlinedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                          ),
+                        ),
                         child: Text(
                           "Cancelar",
+                          style: TextStyle(
+                            color: Colors.black87,
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
                     ),
@@ -53,8 +65,17 @@ class AlertPage extends StatelessWidget {
                     Expanded(
                       child: ElevatedButton(
                         onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xff7E56DA),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0)
+                          ),
+                        ),
                         child: Text(
                           "Confirm",
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                          ),
                         ),
                       ),
                     ),
