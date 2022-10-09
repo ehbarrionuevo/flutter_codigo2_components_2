@@ -139,18 +139,27 @@ class AlertPage extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 8.0),
-                      decoration: BoxDecoration(
-                        border: Border.all(),
-                        borderRadius: BorderRadius.circular(8.0),
-                      ),
-                      child: Text(
-                        "untitle.com/total",
-                        style: TextStyle(
-                          fontSize: 13.0
+                    Expanded(
+                      child: Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 6.0, vertical: 9.0),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            color: Colors.black26.withOpacity(0.16)
+                          ),
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                        child: Text(
+                          "untitle.com/total/promo",
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                          style: TextStyle(
+                            fontSize: 13.0
+                          ),
                         ),
                       ),
+                    ),
+                    const SizedBox(
+                      width: 6.0,
                     ),
                     OutlinedButton.icon(
                       onPressed: () {},
@@ -162,6 +171,9 @@ class AlertPage extends StatelessWidget {
                       icon: Icon(Icons.link),
                       label: Text(
                         "Copy link",
+                        style: TextStyle(
+                          fontSize: 13.0,
+                        ),
                       ),
                     ),
                   ],
