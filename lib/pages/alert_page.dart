@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AlertPage extends StatelessWidget {
+
   void showAlert1(BuildContext context) {
     showDialog(
       context: context,
@@ -89,6 +90,12 @@ class AlertPage extends StatelessWidget {
     );
   }
 
+  void showAlert2(BuildContext context){
+
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,6 +116,18 @@ class AlertPage extends StatelessWidget {
               ),
               onPressed: () {
                 showAlert1(context);
+              },
+            ),
+            MaterialButton(
+              color: Colors.black,
+              child: const Text(
+                "Alert 2",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              onPressed: () {
+                showAlert2(context);
               },
             ),
           ],
