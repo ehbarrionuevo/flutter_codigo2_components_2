@@ -291,11 +291,9 @@ class AlertPage extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-
                 const SizedBox(
                   height: 10.0,
                 ),
-
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Row(
@@ -334,10 +332,9 @@ class AlertPage extends StatelessWidget {
                       const Text(
                         "Remove",
                         style: TextStyle(
-                          color: Colors.redAccent,
-                          fontSize: 11.0,
-                          fontWeight: FontWeight.bold
-                        ),
+                            color: Colors.redAccent,
+                            fontSize: 11.0,
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -382,8 +379,7 @@ class AlertPage extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.redAccent,
                             fontSize: 11.0,
-                            fontWeight: FontWeight.bold
-                        ),
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -428,13 +424,36 @@ class AlertPage extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.redAccent,
                             fontSize: 11.0,
-                            fontWeight: FontWeight.bold
-                        ),
+                            fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
                 ),
 
+                DropdownButton(
+                  value: "A",
+                  items: [
+                    DropdownMenuItem(
+                      value: "A",
+                      child: Text(
+                        "Hola",
+                      ),
+                    ),
+                    DropdownMenuItem(
+                      value: "B",
+                      child: Text(
+                        "Hola 2",
+                      ),
+                    ),
+                    DropdownMenuItem(
+                      value: "C",
+                      child: Text(
+                        "Hola 3",
+                      ),
+                    ),
+                  ],
+                  onChanged: (value) {},
+                ),
               ],
             ),
           ),
